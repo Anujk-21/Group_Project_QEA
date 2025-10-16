@@ -1,0 +1,2 @@
+Loan Amount Principal (1st month): ₹ 69,660.12
+Loan Amount Interest (1st month): ₹ 4,30,339.87

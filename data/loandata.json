@@ -1,0 +1,33 @@
+{
+  "carLoan": {
+    "amount": "1500000",
+    "interest": "9.5",
+    "term": "1"
+  },
+  "homeLoan": {
+    "amount": "2500000",
+    "interest": "8.5",
+    "term": "10"
+  },
+  "personalLoan": {
+    "amount": "1000000",
+    "interest": "10",
+    "term": "2"
+  },
+  "loanAmountCalc": {
+    "emi": "500000",
+    "interest": "11",
+    "termYear": "3",
+    "termMonth": "18"
+  },
+  "loanTenureCalc": {
+    "amount": "2500000",
+    "emi": "80000",
+    "interest": "9.7"
+  },
+  "interestRateCalc": {
+    "amount": "2500000",
+    "emi": "80000",
+    "term": "7"
+  }
+}
