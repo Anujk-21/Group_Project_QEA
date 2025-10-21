@@ -178,6 +178,7 @@ test.describe("Positive Tests - EMI Calculator", () => {
 
 test.describe("Negative Tests - EMI Calculator", () => {
   test.beforeEach(async ({ page }) => {
+    emiPage = new EmiCalculatorPage(page);
     await emiPage.gotoSite();
   });
 
