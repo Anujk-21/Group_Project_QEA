@@ -1,4 +1,5 @@
 import { selectors } from "../locators/selectors";
+import fs from "fs";
 
 export class EmiCalculatorPage {
   constructor(page) {
@@ -7,7 +8,7 @@ export class EmiCalculatorPage {
 
   // Navigate to the EMI calculator homepage
   async gotoSite() {
-    await this.page.goto("https://emicalculator.net/",{waitUntil:"load"});
+    await this.page.goto("https://emicalculator.net/", { waitUntil: "load" });
   }
 
   // Fill car loan form
@@ -21,8 +22,14 @@ export class EmiCalculatorPage {
 
   // Get car loan monthly breakdown
   async getCarLoanBreakdown() {
-    const principal = await this.page.locator(selectors.principalAmt).nth(2).textContent();
-    const interest = await this.page.locator(selectors.interestAmt).nth(3).textContent();
+    const principal = await this.page
+      .locator(selectors.principalAmt)
+      .nth(2)
+      .textContent();
+    const interest = await this.page
+      .locator(selectors.interestAmt)
+      .nth(3)
+      .textContent();
     return { principal, interest };
   }
 
@@ -40,10 +47,38 @@ export class EmiCalculatorPage {
     await this.page.keyboard.press("Enter");
   }
 
+    // Extract table data and save it to a json file
+  async generateJson() {
+    const tableData = await this.page.evaluate(() => {
+      const rows = Array.from(
+        document.querySelectorAll(".yearlypaymentdetails")
+dfd      return rows.map((row) => {
+        const cells = Array.from(row.querySelectorAll("td"));
+        return cells.map((cell) => cell.innerText.trim());
+      });
+    });
+
+    let headerElements = await this.page.locator("//table//th").allInnerTexts();
+    headerElements=headerElements.map((text)=> text.split("\n")[0]);
+    const structuredData = tableData.map((row) =>
+      Object.fromEntries(
+        row.map((cell, i) => [headerElements[i], cell])
+      )
+    );
+
+    fs.writeFileSync("tableData.json", JSON.stringify(structuredData, null, 2));
+  }
+
   // Get home loan monthly breakdown
   async getHomeLoanBreakdown() {
-    const principal = await this.page.locator(selectors.monthlyPayment).nth(0).textContent();
-    const interest = await this.page.locator(selectors.monthlyPayment).nth(1).textContent();
+    const principal = await this.page
+      .locator(selectors.monthlyPayment)
+      .nth(0)
+      .textContent();
+    const interest = await this.page
+      .locator(selectors.monthlyPayment)
+      .nth(1)
+      .textContent();
     return { principal, interest };
   }
 
@@ -63,27 +98,33 @@ export class EmiCalculatorPage {
 
   // Get personal loan breakdown
   async getPersonalLoanBreakdown() {
-    const principal = await this.page.locator(selectors.principalAmt).nth(2).textContent();
-    const interest = await this.page.locator(selectors.interestAmt).nth(3).textContent();
+    const principal = await this.page
+      .locator(selectors.principalAmt)
+      .nth(2)
+      .textContent();
+    const interest = await this.page
+      .locator(selectors.interestAmt)
+      .nth(3)
+      .textContent();
     return { principal, interest };
   }
 
   // Fill Loan Amount Calculator (Yearly)
-async fillLoanAmountCalcYearly(data) {
-//   await this.page.waitForSelector("#loan-amount-calc", { state: "visible" });
-await this.page.locator('//a[@title="Loan Calculators & Widgets"]').click();
-  await this.page.locator('//a[@title="Loan Calculator"]').click();
-  await this.page.locator("#loan-amount-calc").click();
-  await this.page.locator("#loanemi").fill(data.emi);
-  await this.page.locator("#loaninterest").fill(data.interest);
-  await this.page.locator("#loanterm").fill(data.termYear);
-  await this.page.locator("#loanterm").press("Enter");
-}
+  async fillLoanAmountCalcYearly(data) {
+    //   await this.page.waitForSelector("#loan-amount-calc", { state: "visible" });
+    await this.page.locator('//a[@title="Loan Calculators & Widgets"]').click();
+    await this.page.locator('//a[@title="Loan Calculator"]').click();
+    await this.page.locator("#loan-amount-calc").click();
+    await this.page.locator("#loanemi").fill(data.emi);
+    await this.page.locator("#loaninterest").fill(data.interest);
+    await this.page.locator("#loanterm").fill(data.termYear);
+    await this.page.locator("#loanterm").press("Enter");
+  }
 
   // Fill Loan Amount Calculator (Monthly)
   async fillLoanAmountCalcMonthly(data) {
     await this.page.locator('//a[@title="Loan Calculators & Widgets"]').click();
-  await this.page.locator('//a[@title="Loan Calculator"]').click();
+    await this.page.locator('//a[@title="Loan Calculator"]').click();
     await this.page.locator(selectors.loanAmountCalcTab).click();
     await this.page.locator(selectors.loanEMI).fill(data.emi);
     await this.page.locator(selectors.loanInterest).fill(data.interest);
@@ -94,15 +135,21 @@ await this.page.locator('//a[@title="Loan Calculators & Widgets"]').click();
 
   // Get loan amount breakdown
   async getLoanAmountBreakdown() {
-    const principal = await this.page.locator(selectors.principalAmt).nth(2).textContent();
-    const interest = await this.page.locator(selectors.interestAmt).nth(3).textContent();
+    const principal = await this.page
+      .locator(selectors.principalAmt)
+      .nth(2)
+      .textContent();
+    const interest = await this.page
+      .locator(selectors.interestAmt)
+      .nth(3)
+      .textContent();
     return { principal, interest };
   }
 
   // Fill Loan Tenure Calculator
   async fillLoanTenureCalc(data) {
     await this.page.locator('//a[@title="Loan Calculators & Widgets"]').click();
-  await this.page.locator('//a[@title="Loan Calculator"]').click();
+    await this.page.locator('//a[@title="Loan Calculator"]').click();
     await this.page.locator(selectors.loanTenureCalcTab).click();
     await this.page.locator(selectors.loanAmount).fill(data.amount);
     await this.page.locator(selectors.loanEMI).fill(data.emi);
@@ -118,7 +165,7 @@ await this.page.locator('//a[@title="Loan Calculators & Widgets"]').click();
   // Fill Interest Rate Calculator
   async fillInterestRateCalc(data) {
     await this.page.locator('//a[@title="Loan Calculators & Widgets"]').click();
-  await this.page.locator('//a[@title="Loan Calculator"]').click();
+    await this.page.locator('//a[@title="Loan Calculator"]').click();
     await this.page.locator(selectors.interestRateCalcTab).click();
     await this.page.locator(selectors.loanAmount).fill(data.amount);
     await this.page.locator(selectors.loanEMI).fill(data.emi);
@@ -128,6 +175,8 @@ await this.page.locator('//a[@title="Loan Calculators & Widgets"]').click();
 
   // Get interest rate result
   async getInterestRate() {
-    return await this.page.locator(selectors.loanSummaryInterestRate).textContent();
+    return await this.page
+      .locator(selectors.loanSummaryInterestRate)
+      .textContent();
   }
 }

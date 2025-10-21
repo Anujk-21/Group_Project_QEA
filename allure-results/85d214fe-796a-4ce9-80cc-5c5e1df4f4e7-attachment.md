@@ -1,0 +1,507 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e4]:
+      - link "EMI Calculator" [ref=e6] [cursor=pointer]:
+        - /url: https://emicalculator.net/
+      - list [ref=e9]:
+        - listitem [ref=e10]:
+          - link "Loan Calculators & Widgets" [ref=e11] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e12]:
+          - link "Articles" [ref=e13] [cursor=pointer]:
+            - /url: https://emicalculator.net/category/articles/
+        - listitem [ref=e14]:
+          - link "Product Reviews" [ref=e15] [cursor=pointer]:
+            - /url: https://emicalculator.net/category/reviews/
+        - listitem [ref=e16]:
+          - link "News & Opinion" [ref=e17] [cursor=pointer]:
+            - /url: https://emicalculator.net/category/news-opinion/
+  - document [ref=e18]:
+    - main [ref=e20]:
+      - article [ref=e21]:
+        - heading "Home Loan EMI Calculator with Prepayments, Taxes & Insurance" [level=1] [ref=e23]
+        - generic [ref=e25]:
+          - generic [ref=e27]:
+            - generic [ref=e28]:
+              - generic [ref=e29]:
+                - heading "Home Loan Details" [level=3] [ref=e32]
+                - generic [ref=e33]:
+                  - generic [ref=e34]:
+                    - generic [ref=e35]: Home Value (HV)
+                    - generic [ref=e36]:
+                      - textbox "Home Value (HV)" [ref=e37]: 50,00,000
+                      - generic [ref=e39]: ₹
+                  - generic [ref=e40]:
+                    - generic [ref=e41]: Margin OR Down Payment (DP)
+                    - generic [ref=e43]:
+                      - textbox "Margin OR Down Payment (DP)" [ref=e44]: "20"
+                      - generic [ref=e46]:
+                        - generic [ref=e47]:
+                          - radio "%" [checked]
+                          - text: "%"
+                        - generic [ref=e48]:
+                          - radio "₹"
+                          - text: ₹
+                  - generic [ref=e49]:
+                    - generic [ref=e50]: Loan Insurance (LI)
+                    - generic [ref=e51]:
+                      - textbox "Loan Insurance (LI)" [ref=e52]: "0"
+                      - generic [ref=e54]: ₹
+                  - generic [ref=e55]:
+                    - generic [ref=e56]: Loan Amount (HV + LI – DP)
+                    - generic [ref=e57]:
+                      - textbox "Loan Amount (HV + LI – DP)" [ref=e58]: 40,00,000
+                      - generic [ref=e60]: ₹
+                - generic [ref=e61]:
+                  - generic [ref=e62]:
+                    - generic [ref=e63]: Interest Rate
+                    - generic [ref=e64]:
+                      - textbox "Interest Rate" [ref=e65]: "8.5"
+                      - generic [ref=e67]: "%"
+                  - generic [ref=e68]:
+                    - generic [ref=e69]: Loan Tenure
+                    - generic [ref=e71]:
+                      - textbox "Loan Tenure" [active] [ref=e72]: "10"
+                      - generic [ref=e74]:
+                        - generic [ref=e75]:
+                          - radio "Yr" [checked]
+                          - text: Yr
+                        - generic [ref=e76]:
+                          - radio "Mo"
+                          - text: Mo
+                  - generic [ref=e77]:
+                    - generic [ref=e78]: Loan Fees & Charges
+                    - generic [ref=e80]:
+                      - textbox "Loan Fees & Charges" [ref=e81]: "0.25"
+                      - generic [ref=e83]:
+                        - generic [ref=e84]:
+                          - radio "%" [checked]
+                          - text: "%"
+                        - generic [ref=e85]:
+                          - radio "₹"
+                          - text: ₹
+                  - generic [ref=e86]:
+                    - generic [ref=e87]: Start Month & Year
+                    - generic [ref=e88]:
+                      - textbox "Start Month & Year" [ref=e89]: Oct 2025
+                      - generic [ref=e92]: 
+              - generic [ref=e93]:
+                - heading "Homeowner Expenses" [level=3] [ref=e96]
+                - generic [ref=e97]:
+                  - generic [ref=e98]:
+                    - generic [ref=e99]: One-time Expenses
+                    - generic [ref=e101]:
+                      - textbox "One-time Expenses" [ref=e102]: "10"
+                      - generic [ref=e104]:
+                        - generic [ref=e105]:
+                          - radio "%" [checked]
+                          - text: "%"
+                        - generic [ref=e106]:
+                          - radio "₹"
+                          - text: ₹
+                  - generic [ref=e107]:
+                    - generic [ref=e108]: Property Taxes / year
+                    - generic [ref=e110]:
+                      - textbox "Property Taxes / year" [ref=e111]: "0.25"
+                      - generic [ref=e113]:
+                        - generic [ref=e114]:
+                          - radio "%" [checked]
+                          - text: "%"
+                        - generic [ref=e115]:
+                          - radio "₹"
+                          - text: ₹
+                  - generic [ref=e116]:
+                    - generic [ref=e117]: Home Insurance / year
+                    - generic [ref=e119]:
+                      - textbox "Home Insurance / year" [ref=e120]: "0.05"
+                      - generic [ref=e122]:
+                        - generic [ref=e123]:
+                          - radio "%" [checked]
+                          - text: "%"
+                        - generic [ref=e124]:
+                          - radio "₹"
+                          - text: ₹
+                  - generic [ref=e125]:
+                    - generic [ref=e126]: Maintenance Expenses / month
+                    - generic [ref=e127]:
+                      - textbox "Maintenance Expenses / month" [ref=e128]: 2,500
+                      - generic [ref=e130]: ₹
+            - generic:
+              - generic:    
+          - generic: 
+          - text: 
+          - button " Add Prepayments" [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]: 
+            - text: Add Prepayments
+          - text: 
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - table [ref=e138]:
+                - rowgroup [ref=e139]:
+                  - row "Principal & Interest (EMI) ₹ 49,594" [ref=e140]:
+                    - cell "Principal & Interest (EMI)" [ref=e141]
+                    - cell "₹ 49,594" [ref=e142]
+                  - row "Monthly Extra Payment ₹ 0" [ref=e143]:
+                    - cell "Monthly Extra Payment" [ref=e144]
+                    - cell "₹ 0" [ref=e145]
+                  - row "Property Taxes ₹ 1,042" [ref=e146]:
+                    - cell "Property Taxes" [ref=e147]
+                    - cell "₹ 1,042" [ref=e148]
+                  - row "Home Insurance ₹ 208" [ref=e149]:
+                    - cell "Home Insurance" [ref=e150]
+                    - cell "₹ 208" [ref=e151]
+                  - row "Maintenance Expenses ₹ 2,500" [ref=e152]:
+                    - cell "Maintenance Expenses" [ref=e153]
+                    - cell "₹ 2,500" [ref=e154]
+                  - row "Total Monthly Payment ₹ 53,344" [ref=e155]:
+                    - cell "Total Monthly Payment" [ref=e156]
+                    - cell "₹ 53,344" [ref=e157]
+              - generic [ref=e158]:
+                - generic [ref=e159]:
+                  - img [ref=e162]:
+                    - generic [ref=e173]: Totalof allPayments
+                  - table [ref=e176]:
+                    - rowgroup [ref=e177]:
+                      - row "Down Payment, Fees & One-time Expenses ₹ 15,10,000" [ref=e178]:
+                        - cell "Down Payment, Fees & One-time Expenses" [ref=e179]
+                        - cell "₹ 15,10,000" [ref=e180]
+                      - row "Principal ₹ 40,00,000" [ref=e181]:
+                        - cell "Principal" [ref=e182]
+                        - cell "₹ 40,00,000" [ref=e183]
+                      - row "Prepayments ₹ 0" [ref=e184]:
+                        - cell "Prepayments" [ref=e185]
+                        - cell "₹ 0" [ref=e186]
+                      - row "Interest ₹ 19,51,313" [ref=e187]:
+                        - cell "Interest" [ref=e188]
+                        - cell "₹ 19,51,313" [ref=e189]
+                      - row "Taxes, Home Insurance & Maintenance ₹ 4,50,000" [ref=e190]:
+                        - cell "Taxes, Home Insurance & Maintenance" [ref=e191]
+                        - cell "₹ 4,50,000" [ref=e192]
+                - generic [ref=e193]:
+                  - generic [ref=e194]: Total of all Payments
+                  - generic [ref=e195]: ₹ 79,11,313
+            - generic [ref=e196]:
+              - generic:
+                - insertion
+              - generic:
+                - insertion
+          - generic [ref=e197]:
+            - text: Home Loan Payment Schedule
+            - text: (Oct 2025 - Sep 2035)
+          - img [ref=e200]:
+            - generic [ref=e208]: Home Loan Payment / year
+            - generic [ref=e210]: Balance
+            - generic [ref=e266]:
+              - generic [ref=e268] [cursor=pointer]: Principal
+              - generic [ref=e271] [cursor=pointer]: Prepayments
+              - generic [ref=e274] [cursor=pointer]: Interest
+              - generic [ref=e277] [cursor=pointer]: Taxes, Home Insurance & Maintenance
+              - generic [ref=e281] [cursor=pointer]: Balance
+            - generic [ref=e282]:
+              - generic [ref=e283]: "2025"
+              - generic [ref=e284]: "2026"
+              - generic [ref=e285]: "2027"
+              - generic [ref=e286]: "2028"
+              - generic [ref=e287]: "2029"
+              - generic [ref=e288]: "2030"
+              - generic [ref=e289]: "2031"
+              - generic [ref=e290]: "2032"
+              - generic [ref=e291]: "2033"
+              - generic [ref=e292]: "2034"
+              - generic [ref=e293]: "2035"
+            - generic [ref=e294]:
+              - generic [ref=e295]: ₹ 0
+              - generic [ref=e296]: ₹ 1,50,000
+              - generic [ref=e297]: ₹ 3,00,000
+              - generic [ref=e298]: ₹ 4,50,000
+              - generic [ref=e299]: ₹ 6,00,000
+              - generic [ref=e300]: ₹ 7,50,000
+            - generic [ref=e301]:
+              - generic [ref=e302]: ₹ 0
+              - generic [ref=e303]: ₹ 10,00,000
+              - generic [ref=e304]: ₹ 20,00,000
+              - generic [ref=e305]: ₹ 30,00,000
+              - generic [ref=e306]: ₹ 40,00,000
+              - generic [ref=e307]: ₹ 50,00,000
+          - table [ref=e309]:
+            - rowgroup [ref=e310]:
+              - row "Year Principal (A) Interest (B) Taxes, Home Insurance & Maintenance (C) Total Payment (A + B + C) Balance Loan Paid To Date" [ref=e311]:
+                - cell "Year" [ref=e312]
+                - cell "Principal (A)" [ref=e313]:
+                  - text: Principal
+                  - text: (A)
+                - cell "Interest (B)" [ref=e314]:
+                  - text: Interest
+                  - text: (B)
+                - cell "Taxes, Home Insurance & Maintenance (C)" [ref=e315]
+                - cell "Total Payment (A + B + C)" [ref=e316]:
+                  - text: Total Payment
+                  - text: (A + B + C)
+                - cell "Balance" [ref=e317]
+                - cell "Loan Paid To Date" [ref=e318]
+              - row " 2025 ₹ 64,236 ₹ 84,547 ₹ 11,250 ₹ 1,60,033 ₹ 39,35,764 1.61%" [ref=e319]:
+                - cell " 2025" [ref=e320] [cursor=pointer]
+                - cell "₹ 64,236" [ref=e321]
+                - cell "₹ 84,547" [ref=e322]
+                - cell "₹ 11,250" [ref=e323]
+                - cell "₹ 1,60,033" [ref=e324]
+                - cell "₹ 39,35,764" [ref=e325]
+                - cell "1.61%" [ref=e326]
+              - row:
+                - cell
+              - row " 2026 ₹ 2,70,987 ₹ 3,24,144 ₹ 45,000 ₹ 6,40,131 ₹ 36,64,777 8.38%" [ref=e327]:
+                - cell " 2026" [ref=e328] [cursor=pointer]
+                - cell "₹ 2,70,987" [ref=e329]
+                - cell "₹ 3,24,144" [ref=e330]
+                - cell "₹ 45,000" [ref=e331]
+                - cell "₹ 6,40,131" [ref=e332]
+                - cell "₹ 36,64,777" [ref=e333]
+                - cell "8.38%" [ref=e334]
+              - row:
+                - cell
+              - row " 2027 ₹ 2,94,940 ₹ 3,00,191 ₹ 45,000 ₹ 6,40,131 ₹ 33,69,837 15.75%" [ref=e335]:
+                - cell " 2027" [ref=e336] [cursor=pointer]
+                - cell "₹ 2,94,940" [ref=e337]
+                - cell "₹ 3,00,191" [ref=e338]
+                - cell "₹ 45,000" [ref=e339]
+                - cell "₹ 6,40,131" [ref=e340]
+                - cell "₹ 33,69,837" [ref=e341]
+                - cell "15.75%" [ref=e342]
+              - row:
+                - cell
+              - row " 2028 ₹ 3,21,010 ₹ 2,74,121 ₹ 45,000 ₹ 6,40,131 ₹ 30,48,827 23.78%" [ref=e343]:
+                - cell " 2028" [ref=e344] [cursor=pointer]
+                - cell "₹ 3,21,010" [ref=e345]
+                - cell "₹ 2,74,121" [ref=e346]
+                - cell "₹ 45,000" [ref=e347]
+                - cell "₹ 6,40,131" [ref=e348]
+                - cell "₹ 30,48,827" [ref=e349]
+                - cell "23.78%" [ref=e350]
+              - row:
+                - cell
+              - row " 2029 ₹ 3,49,384 ₹ 2,45,747 ₹ 45,000 ₹ 6,40,131 ₹ 26,99,443 32.51%" [ref=e351]:
+                - cell " 2029" [ref=e352] [cursor=pointer]
+                - cell "₹ 3,49,384" [ref=e353]
+                - cell "₹ 2,45,747" [ref=e354]
+                - cell "₹ 45,000" [ref=e355]
+                - cell "₹ 6,40,131" [ref=e356]
+                - cell "₹ 26,99,443" [ref=e357]
+                - cell "32.51%" [ref=e358]
+              - row:
+                - cell
+              - row " 2030 ₹ 3,80,267 ₹ 2,14,865 ₹ 45,000 ₹ 6,40,131 ₹ 23,19,176 42.02%" [ref=e359]:
+                - cell " 2030" [ref=e360] [cursor=pointer]
+                - cell "₹ 3,80,267" [ref=e361]
+                - cell "₹ 2,14,865" [ref=e362]
+                - cell "₹ 45,000" [ref=e363]
+                - cell "₹ 6,40,131" [ref=e364]
+                - cell "₹ 23,19,176" [ref=e365]
+                - cell "42.02%" [ref=e366]
+              - row:
+                - cell
+              - row " 2031 ₹ 4,13,879 ₹ 1,81,253 ₹ 45,000 ₹ 6,40,131 ₹ 19,05,298 52.37%" [ref=e367]:
+                - cell " 2031" [ref=e368] [cursor=pointer]
+                - cell "₹ 4,13,879" [ref=e369]
+                - cell "₹ 1,81,253" [ref=e370]
+                - cell "₹ 45,000" [ref=e371]
+                - cell "₹ 6,40,131" [ref=e372]
+                - cell "₹ 19,05,298" [ref=e373]
+                - cell "52.37%" [ref=e374]
+              - row:
+                - cell
+              - row " 2032 ₹ 4,50,462 ₹ 1,44,669 ₹ 45,000 ₹ 6,40,131 ₹ 14,54,836 63.63%" [ref=e375]:
+                - cell " 2032" [ref=e376] [cursor=pointer]
+                - cell "₹ 4,50,462" [ref=e377]
+                - cell "₹ 1,44,669" [ref=e378]
+                - cell "₹ 45,000" [ref=e379]
+                - cell "₹ 6,40,131" [ref=e380]
+                - cell "₹ 14,54,836" [ref=e381]
+                - cell "63.63%" [ref=e382]
+              - row:
+                - cell
+              - row " 2033 ₹ 4,90,279 ₹ 1,04,853 ₹ 45,000 ₹ 6,40,131 ₹ 9,64,557 75.89%" [ref=e383]:
+                - cell " 2033" [ref=e384] [cursor=pointer]
+                - cell "₹ 4,90,279" [ref=e385]
+                - cell "₹ 1,04,853" [ref=e386]
+                - cell "₹ 45,000" [ref=e387]
+                - cell "₹ 6,40,131" [ref=e388]
+                - cell "₹ 9,64,557" [ref=e389]
+                - cell "75.89%" [ref=e390]
+              - row:
+                - cell
+              - row " 2034 ₹ 5,33,615 ₹ 61,516 ₹ 45,000 ₹ 6,40,131 ₹ 4,30,942 89.23%" [ref=e391]:
+                - cell " 2034" [ref=e392] [cursor=pointer]
+                - cell "₹ 5,33,615" [ref=e393]
+                - cell "₹ 61,516" [ref=e394]
+                - cell "₹ 45,000" [ref=e395]
+                - cell "₹ 6,40,131" [ref=e396]
+                - cell "₹ 4,30,942" [ref=e397]
+                - cell "89.23%" [ref=e398]
+              - row:
+                - cell
+              - row " 2035 ₹ 4,30,942 ₹ 15,406 ₹ 33,750 ₹ 4,80,098 ₹ 0 100%" [ref=e399]:
+                - cell " 2035" [ref=e400] [cursor=pointer]
+                - cell "₹ 4,30,942" [ref=e401]
+                - cell "₹ 15,406" [ref=e402]
+                - cell "₹ 33,750" [ref=e403]
+                - cell "₹ 4,80,098" [ref=e404]
+                - cell "₹ 0" [ref=e405]
+                - cell "100%" [ref=e406]
+              - row:
+                - cell
+          - generic [ref=e407]:
+            - paragraph [ref=e408]: Want to download OR share a custom link to your EMI calculation (with all your numbers pre-filled)?
+            - button " Download PDF" [ref=e409] [cursor=pointer]:
+              - generic [ref=e410]: 
+              - text: Download PDF
+            - button " Download Excel" [ref=e411] [cursor=pointer]:
+              - generic [ref=e412]: 
+              - text: Download Excel
+            - button " Share" [ref=e413] [cursor=pointer]:
+              - generic [ref=e414]: 
+              - text: Share
+            - text: 
+        - generic [ref=e415]:
+          - heading "How to Use Home Loan EMI Calculator?" [level=2] [ref=e416]
+          - paragraph [ref=e417]: Using our Home Loan EMI Calculator, you can calculate how much monthly and total expenditure you really incur by purchasing a home using your bank home loan.
+          - paragraph [ref=e418]:
+            - strong [ref=e419]: Home Loan Details
+            - text: includes single premium loan insurance and processing fees.
+          - list [ref=e420]:
+            - listitem [ref=e421]:
+              - strong [ref=e422]: Home Value
+              - text: is the actual price of the home you purchased (i.e., sale deed value). 
+            - listitem [ref=e423]:
+              - strong [ref=e424]: Down Payment, aka Margin
+              - text: ", is the total money you paid to the seller or builder from your own pocket, entered either in Rupees or as a percentage of Home Value. "
+            - listitem [ref=e425]:
+              - strong [ref=e426]: Loan Insurance
+              - text: is the single premium amount, for the
+              - link "Home Loan Protection Plan" [ref=e427] [cursor=pointer]:
+                - /url: https://emicalculator.net/home-loan-protection-plan-what-bank-officials-wont-tell-you
+              - text: (HLPP) OR Term Insurance Plan, that gets included in your home loan amount. If you want to guesstimate this amount, use the
+              - link "LIC premium calculator" [ref=e428] [cursor=pointer]:
+                - /url: https://www.licindia.in/premium_calculator.htm
+              - text: to calculate yearly premium for eTerm plan using your age, loan term and loan amount for Sum Assured. You then multiply this number by your loan tenure. 
+            - listitem [ref=e429]:
+              - strong [ref=e430]: Loan Amount
+              - text: is calculated as
+              - strong [ref=e431]: Home Value + Loan Insurance — Down Payment
+              - text: . 
+            - listitem [ref=e432]:
+              - strong [ref=e433]: Interest Rate
+              - text: charged by the bank / lender. 
+            - listitem [ref=e434]:
+              - strong [ref=e435]: Loan Fees & Charges
+              - text: includes Processing Fees, Administrative Charges etc. along with service taxes, entered either in Rupees or as a percentage of Loan Amount. 
+          - paragraph [ref=e436]:
+            - strong [ref=e437]: Homeowner Expenses
+            - text: can be entered either in Rupees or as a percentage of Home Value. You will not pay property taxes and home insurance premium each month, but it is included in the total monthly payment with the assumption that you are setting aside this amount (either through
+            - link "Recurring Deposit" [ref=e438] [cursor=pointer]:
+              - /url: https://emicalculator.net/recurring-deposits-an-incredibly-useful-product
+            - text: or some other means) every month. This will ensure that you will have the necessary money to make the payment once or twice a year. Please note that the recurring expenses will change over the lifetime of the home loan due to inflation and other factors. They will also continue beyond the home loan tenure. You should consider all these factors, especially when making a
+            - link "Rent vs. Buy" [ref=e439] [cursor=pointer]:
+              - /url: https://emicalculator.net/buy-or-rent-financial-factors-that-you-must-not-ignore-while-making-your-decision
+            - link "decision" [ref=e440] [cursor=pointer]:
+              - /url: https://emicalculator.net/factors-to-consider-in-buying-vs-renting-a-home
+            - text: .
+          - list [ref=e441]:
+            - listitem [ref=e442]:
+              - strong [ref=e443]: One-time Expenses
+              - text: can include Registration Fees, Stamp Duty and money you spent on sprucing up your new home. Optionally, you could also include the bribe you paid to the Govt Babu (during sale deed registration) and the amount spent on a lavish house warming ceremony (after all, this is a great occasion to show off in front of your friends & relatives). 
+            - listitem [ref=e444]:
+              - strong [ref=e445]: Property Taxes
+              - text: is the annual payment that you grudgingly make to your local municipal body. 
+            - listitem [ref=e446]:
+              - strong [ref=e447]:
+                - link "Home Insurance" [ref=e448] [cursor=pointer]:
+                  - /url: https://emicalculator.net/should-you-buy-home-insurance
+              - text: is the yearly premium you pay to insure your home—if it isn’t already covered by loan insurance plan. 
+            - listitem [ref=e449]:
+              - strong [ref=e450]: Monthly Maintenance Expenses
+              - text: is what you pay to keep your apartment secure, clean and resourceful. If its an independent house, you can assume your annual maintenance expenditure to be about one percent of your home value. Divide this number by 12 to arrive at monthly maintenance amount. 
+          - paragraph [ref=e451]:
+            - link "Prepayments" [ref=e452] [cursor=pointer]:
+              - /url: https://emicalculator.net/which-loan-should-you-prepay-first
+              - strong [ref=e453]: Prepayments
+            - text: help you pay off your loan faster and reduce total interest cost.
+          - paragraph [ref=e454]: We wish you an affordable home loan and a great new home!
+        - generic [ref=e455]:
+          - generic [ref=e456]:
+            - heading "Leave a Reply" [level=3] [ref=e457]: Leave a Reply
+            - generic [ref=e458]:
+              - paragraph [ref=e459]:
+                - text: Your email address will not be published.
+                - generic [ref=e460]: Required fields are marked *
+              - paragraph [ref=e461]:
+                - generic [ref=e462]: Comment *
+                - textbox "Comment *" [ref=e463]
+              - paragraph [ref=e464]:
+                - generic [ref=e465]: Name *
+                - textbox "Name *" [ref=e466]
+              - paragraph [ref=e467]:
+                - generic [ref=e468]: Email *
+                - textbox "Email *" [ref=e469]
+              - paragraph [ref=e470]:
+                - generic [ref=e471]: Website
+                - textbox "Website" [ref=e472]
+              - paragraph [ref=e473]:
+                - button "Post Comment" [ref=e474] [cursor=pointer]
+          - heading "241 responses to “Home Loan EMI Calculator with Prepayments, Taxes & Insurance”" [level=2] [ref=e475]
+          - generic [ref=e476]:
+            - list
+            - button "Load More" [ref=e478]
+  - contentinfo [ref=e479]:
+    - generic [ref=e480]:
+      - generic [ref=e481]:
+        - generic [ref=e482]:
+          - heading "Calculators & Widgets" [level=3] [ref=e483]
+          - list [ref=e485]:
+            - listitem [ref=e486]:
+              - link "EMI Calculator" [ref=e487] [cursor=pointer]:
+                - /url: https://emicalculator.net/
+            - listitem [ref=e488]:
+              - link "Android App" [ref=e489] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=net.emicalculator
+            - listitem [ref=e490]:
+              - link "Loan Calculator — Calculate EMI, Affordability, Tenure & Interest Rate" [ref=e491] [cursor=pointer]:
+                - /url: https://emicalculator.net/loan-calculator/
+            - listitem [ref=e492]:
+              - link "Home Loan EMI Calculator with Prepayments, Taxes & Insurance" [ref=e493] [cursor=pointer]:
+                - /url: https://emicalculator.net/home-loan-emi-calculator/
+            - listitem [ref=e494]:
+              - link "Mobile-friendly EMI Calculator Widget" [ref=e495] [cursor=pointer]:
+                - /url: https://emicalculator.net/emi-calculator-widget/
+            - listitem [ref=e496]:
+              - link "Home Loan Interest Rates — As of July 1, 2025" [ref=e497] [cursor=pointer]:
+                - /url: https://emicalculator.net/home-loan-interest-rates/
+        - generic [ref=e498]:
+          - heading "Android App" [level=3] [ref=e499]
+          - generic [ref=e500]:
+            - paragraph [ref=e501]:
+              - text: You can also download our
+              - link "EMI Calculator android app" [ref=e502] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=net.emicalculator
+                - strong [ref=e503]: EMI Calculator android app
+              - text: from the Google Play Store.
+            - paragraph [ref=e504]:
+              - link [ref=e505] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=net.emicalculator
+                - img [ref=e506]
+        - generic [ref=e507]:
+          - heading "About Us" [level=3] [ref=e508]
+          - list [ref=e510]:
+            - listitem [ref=e511]:
+              - link "Privacy Policy" [ref=e512] [cursor=pointer]:
+                - /url: https://emicalculator.net/privacy-policy/
+            - listitem [ref=e513]:
+              - link "Terms of Use" [ref=e514] [cursor=pointer]:
+                - /url: https://emicalculator.net/terms-of-use/
+            - listitem [ref=e515]:
+              - link "Contact Us" [ref=e516] [cursor=pointer]:
+                - /url: https://emicalculator.net/contact/
+      - paragraph [ref=e518]: Copyright © 2011-2025 emicalculator.net. All Rights Reserved.
+```

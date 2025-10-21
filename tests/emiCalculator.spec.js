@@ -2,14 +2,14 @@ import { test, expect } from "@playwright/test";
 import { EmiCalculatorPage } from "../pages/EmiCalculatorPage";
 import loanData from "../data/loandata.json";
 
+let emiPage;
 test.describe("Smoke & Sanity Tests - EMI Calculator", () => {
   test.beforeEach(async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
+    emiPage = new EmiCalculatorPage(page);
     await emiPage.gotoSite();
   });
 
-  test("@Smoke Test - Car Loan EMI Breakdown", async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
+  test("@Smoke Test - Car Loan EMI Breakdown", async () => {
     await test.step("Fill car loan details", async () => {
       await emiPage.fillCarLoan(loanData.carLoan);
     });
@@ -22,14 +22,18 @@ test.describe("Smoke & Sanity Tests - EMI Calculator", () => {
     });
   });
 
-  test("@Sanity Test - Home Loan EMI Breakdown", async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
+  test("@Sanity Test - Home Loan EMI Breakdown", async () => {
     await test.step("Navigate to Home Loan EMI Calculator", async () => {
       await emiPage.navigateToHomeLoan();
     });
     await test.step("Fill home loan details", async () => {
       await emiPage.fillHomeLoan(loanData.homeLoan);
     });
+
+    await test.step("Fetch data from table and store it in json",async () =>{
+      await emiPage.generateJson();
+    });
+
     await test.step("Fetch and validate monthly breakdown", async () => {
       const { principal, interest } = await emiPage.getHomeLoanBreakdown();
       console.log(`Home Loan Principal (1st month): ${principal}`);
@@ -42,12 +46,10 @@ test.describe("Smoke & Sanity Tests - EMI Calculator", () => {
 
 test.describe("@Regression Tests - EMI Calculator", () => {
   test.beforeEach(async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await emiPage.gotoSite();
   });
 
   test("Loan Amount Calculator - Yearly Tenure", async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await test.step("Fill loan amount calculator with yearly tenure", async () => {
       await emiPage.fillLoanAmountCalcYearly(loanData.loanAmountCalc);
     });
@@ -61,7 +63,6 @@ test.describe("@Regression Tests - EMI Calculator", () => {
   });
 
   test("Loan Amount Calculator - Monthly Tenure", async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await test.step("Fill loan amount calculator with monthly tenure", async () => {
       await emiPage.fillLoanAmountCalcMonthly(loanData.loanAmountCalc);
     });
@@ -75,7 +76,6 @@ test.describe("@Regression Tests - EMI Calculator", () => {
   });
 
   test("Loan Tenure Calculator - Valid Inputs", async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await test.step("Fill loan tenure calculator", async () => {
       await emiPage.fillLoanTenureCalc(loanData.loanTenureCalc);
     });
@@ -87,7 +87,6 @@ test.describe("@Regression Tests - EMI Calculator", () => {
   });
 
   test("Interest Rate Calculator - Valid Inputs", async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await test.step("Fill interest rate calculator", async () => {
       await emiPage.fillInterestRateCalc(loanData.interestRateCalc);
     });
@@ -99,7 +98,6 @@ test.describe("@Regression Tests - EMI Calculator", () => {
   });
 
   test("Personal Loan EMI Calculator", async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await test.step("Navigate to Loan Calculator", async () => {
       await emiPage.navigateToLoanCalculator();
     });
@@ -118,12 +116,10 @@ test.describe("@Regression Tests - EMI Calculator", () => {
 
 test.describe("Positive Tests - EMI Calculator", () => {
   test.beforeEach(async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await emiPage.gotoSite();
   });
 
   test("Car Loan - Validate EMI Breakdown", async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await test.step("Fill car loan form with valid data", async () => {
       await emiPage.fillCarLoan(loanData.carLoan);
     });
@@ -135,7 +131,6 @@ test.describe("Positive Tests - EMI Calculator", () => {
   });
 
   test("Home Loan - Validate EMI Breakdown", async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await test.step("Navigate and fill home loan form", async () => {
       await emiPage.navigateToHomeLoan();
       await emiPage.fillHomeLoan(loanData.homeLoan);
@@ -148,7 +143,6 @@ test.describe("Positive Tests - EMI Calculator", () => {
   });
 
   test("Loan Tenure - Validate Result Format", async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await test.step("Fill loan tenure calculator", async () => {
       await emiPage.fillLoanTenureCalc(loanData.loanTenureCalc);
     });
@@ -159,7 +153,6 @@ test.describe("Positive Tests - EMI Calculator", () => {
   });
 
   test("Interest Rate - Validate Result Format", async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await test.step("Fill interest rate calculator", async () => {
       await emiPage.fillInterestRateCalc(loanData.interestRateCalc);
     });
@@ -170,7 +163,6 @@ test.describe("Positive Tests - EMI Calculator", () => {
   });
 
   test("Loan Amount Calculator - Monthly Tenure Format", async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await test.step("Fill monthly tenure loan amount calculator", async () => {
       await emiPage.fillLoanAmountCalcMonthly(loanData.loanAmountCalc);
     });
@@ -184,14 +176,12 @@ test.describe("Positive Tests - EMI Calculator", () => {
 
 test.describe("Negative Tests - EMI Calculator", () => {
   test.beforeEach(async ({ page }) => {
-    const emiPage = new EmiCalculatorPage(page);
     await emiPage.gotoSite();
   });
 
   test("Car Loan - Empty Loan Amount", async ({ page }) => {
     test.info().annotations.push({ type: 'negative', description: 'Validates rejection of empty loan amount in car loan calculator' });
 
-    const emiPage = new EmiCalculatorPage(page);
     await test.step("Fill car loan with empty amount", async () => {
       await emiPage.fillCarLoan({ amount: "", interest: "9.5", term: "1" });
     });

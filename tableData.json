@@ -1,0 +1,101 @@
+[
+  {
+    "Year": "2025",
+    "Principal": "₹ 64,236",
+    "Interest": "₹ 84,547",
+    "Taxes, Home Insurance & Maintenance (C)": "₹ 11,250",
+    "Total Payment": "₹ 1,60,033",
+    "Balance": "₹ 39,35,764",
+    "Loan Paid To Date": "1.61%"
+  },
+  {
+    "Year": "2026",
+    "Principal": "₹ 2,70,987",
+    "Interest": "₹ 3,24,144",
+    "Taxes, Home Insurance & Maintenance (C)": "₹ 45,000",
+    "Total Payment": "₹ 6,40,131",
+    "Balance": "₹ 36,64,777",
+    "Loan Paid To Date": "8.38%"
+  },
+  {
+    "Year": "2027",
+    "Principal": "₹ 2,94,940",
+    "Interest": "₹ 3,00,191",
+    "Taxes, Home Insurance & Maintenance (C)": "₹ 45,000",
+    "Total Payment": "₹ 6,40,131",
+    "Balance": "₹ 33,69,837",
+    "Loan Paid To Date": "15.75%"
+  },
+  {
+    "Year": "2028",
+    "Principal": "₹ 3,21,010",
+    "Interest": "₹ 2,74,121",
+    "Taxes, Home Insurance & Maintenance (C)": "₹ 45,000",
+    "Total Payment": "₹ 6,40,131",
+    "Balance": "₹ 30,48,827",
+    "Loan Paid To Date": "23.78%"
+  },
+  {
+    "Year": "2029",
+    "Principal": "₹ 3,49,384",
+    "Interest": "₹ 2,45,747",
+    "Taxes, Home Insurance & Maintenance (C)": "₹ 45,000",
+    "Total Payment": "₹ 6,40,131",
+    "Balance": "₹ 26,99,443",
+    "Loan Paid To Date": "32.51%"
+  },
+  {
+    "Year": "2030",
+    "Principal": "₹ 3,80,267",
+    "Interest": "₹ 2,14,865",
+    "Taxes, Home Insurance & Maintenance (C)": "₹ 45,000",
+    "Total Payment": "₹ 6,40,131",
+    "Balance": "₹ 23,19,176",
+    "Loan Paid To Date": "42.02%"
+  },
+  {
+    "Year": "2031",
+    "Principal": "₹ 4,13,879",
+    "Interest": "₹ 1,81,253",
+    "Taxes, Home Insurance & Maintenance (C)": "₹ 45,000",
+    "Total Payment": "₹ 6,40,131",
+    "Balance": "₹ 19,05,298",
+    "Loan Paid To Date": "52.37%"
+  },
+  {
+    "Year": "2032",
+    "Principal": "₹ 4,50,462",
+    "Interest": "₹ 1,44,669",
+    "Taxes, Home Insurance & Maintenance (C)": "₹ 45,000",
+    "Total Payment": "₹ 6,40,131",
+    "Balance": "₹ 14,54,836",
+    "Loan Paid To Date": "63.63%"
+  },
+  {
+    "Year": "2033",
+    "Principal": "₹ 4,90,279",
+    "Interest": "₹ 1,04,853",
+    "Taxes, Home Insurance & Maintenance (C)": "₹ 45,000",
+    "Total Payment": "₹ 6,40,131",
+    "Balance": "₹ 9,64,557",
+    "Loan Paid To Date": "75.89%"
+  },
+  {
+    "Year": "2034",
+    "Principal": "₹ 5,33,615",
+    "Interest": "₹ 61,516",
+    "Taxes, Home Insurance & Maintenance (C)": "₹ 45,000",
+    "Total Payment": "₹ 6,40,131",
+    "Balance": "₹ 4,30,942",
+    "Loan Paid To Date": "89.23%"
+  },
+  {
+    "Year": "2035",
+    "Principal": "₹ 4,30,942",
+    "Interest": "₹ 15,406",
+    "Taxes, Home Insurance & Maintenance (C)": "₹ 33,750",
+    "Total Payment": "₹ 4,80,098",
+    "Balance": "₹ 0",
+    "Loan Paid To Date": "100%"
+  }
+]
