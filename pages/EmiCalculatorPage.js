@@ -52,7 +52,7 @@ export class EmiCalculatorPage {
     const tableData = await this.page.evaluate(() => {
       const rows = Array.from(
         document.querySelectorAll(".yearlypaymentdetails")
-dfd      return rows.map((row) => {
+        return rows.map((row) => {
         const cells = Array.from(row.querySelectorAll("td"));
         return cells.map((cell) => cell.innerText.trim());
       });
