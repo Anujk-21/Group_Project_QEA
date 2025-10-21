@@ -45,11 +45,12 @@ test.describe("Smoke & Sanity Tests - EMI Calculator", () => {
 });
 
 test.describe("@Regression Tests - EMI Calculator", () => {
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({page}) => {
+    emiPage = new EmiCalculatorPage(page);
     await emiPage.gotoSite();
   });
 
-  test("Loan Amount Calculator - Yearly Tenure", async ({ page }) => {
+  test("Loan Amount Calculator - Yearly Tenure", async () => {
     await test.step("Fill loan amount calculator with yearly tenure", async () => {
       await emiPage.fillLoanAmountCalcYearly(loanData.loanAmountCalc);
     });
@@ -62,7 +63,7 @@ test.describe("@Regression Tests - EMI Calculator", () => {
     });
   });
 
-  test("Loan Amount Calculator - Monthly Tenure", async ({ page }) => {
+  test("Loan Amount Calculator - Monthly Tenure", async () => {
     await test.step("Fill loan amount calculator with monthly tenure", async () => {
       await emiPage.fillLoanAmountCalcMonthly(loanData.loanAmountCalc);
     });
@@ -75,7 +76,7 @@ test.describe("@Regression Tests - EMI Calculator", () => {
     });
   });
 
-  test("Loan Tenure Calculator - Valid Inputs", async ({ page }) => {
+  test("Loan Tenure Calculator - Valid Inputs", async () => {
     await test.step("Fill loan tenure calculator", async () => {
       await emiPage.fillLoanTenureCalc(loanData.loanTenureCalc);
     });
@@ -86,7 +87,7 @@ test.describe("@Regression Tests - EMI Calculator", () => {
     });
   });
 
-  test("Interest Rate Calculator - Valid Inputs", async ({ page }) => {
+  test("Interest Rate Calculator - Valid Inputs", async () => {
     await test.step("Fill interest rate calculator", async () => {
       await emiPage.fillInterestRateCalc(loanData.interestRateCalc);
     });
@@ -97,7 +98,7 @@ test.describe("@Regression Tests - EMI Calculator", () => {
     });
   });
 
-  test("Personal Loan EMI Calculator", async ({ page }) => {
+  test("Personal Loan EMI Calculator", async () => {
     await test.step("Navigate to Loan Calculator", async () => {
       await emiPage.navigateToLoanCalculator();
     });
@@ -115,11 +116,12 @@ test.describe("@Regression Tests - EMI Calculator", () => {
 });
 
 test.describe("Positive Tests - EMI Calculator", () => {
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({page}) => {
+    emiPage = new EmiCalculatorPage(page);
     await emiPage.gotoSite();
   });
 
-  test("Car Loan - Validate EMI Breakdown", async ({ page }) => {
+  test("Car Loan - Validate EMI Breakdown", async () => {
     await test.step("Fill car loan form with valid data", async () => {
       await emiPage.fillCarLoan(loanData.carLoan);
     });
@@ -130,7 +132,7 @@ test.describe("Positive Tests - EMI Calculator", () => {
     });
   });
 
-  test("Home Loan - Validate EMI Breakdown", async ({ page }) => {
+  test("Home Loan - Validate EMI Breakdown", async () => {
     await test.step("Navigate and fill home loan form", async () => {
       await emiPage.navigateToHomeLoan();
       await emiPage.fillHomeLoan(loanData.homeLoan);
@@ -142,7 +144,7 @@ test.describe("Positive Tests - EMI Calculator", () => {
     });
   });
 
-  test("Loan Tenure - Validate Result Format", async ({ page }) => {
+  test("Loan Tenure - Validate Result Format", async () => {
     await test.step("Fill loan tenure calculator", async () => {
       await emiPage.fillLoanTenureCalc(loanData.loanTenureCalc);
     });
@@ -152,7 +154,7 @@ test.describe("Positive Tests - EMI Calculator", () => {
     });
   });
 
-  test("Interest Rate - Validate Result Format", async ({ page }) => {
+  test("Interest Rate - Validate Result Format", async () => {
     await test.step("Fill interest rate calculator", async () => {
       await emiPage.fillInterestRateCalc(loanData.interestRateCalc);
     });
@@ -162,7 +164,7 @@ test.describe("Positive Tests - EMI Calculator", () => {
     });
   });
 
-  test("Loan Amount Calculator - Monthly Tenure Format", async ({ page }) => {
+  test("Loan Amount Calculator - Monthly Tenure Format", async () => {
     await test.step("Fill monthly tenure loan amount calculator", async () => {
       await emiPage.fillLoanAmountCalcMonthly(loanData.loanAmountCalc);
     });
@@ -179,7 +181,7 @@ test.describe("Negative Tests - EMI Calculator", () => {
     await emiPage.gotoSite();
   });
 
-  test("Car Loan - Empty Loan Amount", async ({ page }) => {
+  test("Car Loan - Empty Loan Amount", async () => {
     test.info().annotations.push({ type: 'negative', description: 'Validates rejection of empty loan amount in car loan calculator' });
 
     await test.step("Fill car loan with empty amount", async () => {

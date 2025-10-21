@@ -1,6 +1,0 @@
-Year Principal
-(A) Interest
-(B) Taxes, Home Insurance & Maintenance (C) Total Payment
-(A + B + C) Balance Loan Paid To Date
-Home Loan Principal (1st month): ₹ 21,261
-Home Loan Interest (1st month): ₹ 28,333
