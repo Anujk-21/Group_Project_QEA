@@ -51,9 +51,8 @@ export class EmiCalculatorPage {
   async generateJson() {
     const tableData = await this.page.evaluate(() => {
       const rows = Array.from(
-        document.querySelectorAll(".yearlypaymentdetails")
-      );    // Extract table datavc
-      return rows.map((row) => {
+        document.querySelectorAll(".yearlypaymentdetails"));
+        return rows.map((row) => {
         const cells = Array.from(row.querySelectorAll("td"));
         return cells.map((cell) => cell.innerText.trim());
       });
